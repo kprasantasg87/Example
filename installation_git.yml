@@ -1,0 +1,9 @@
+---
+- hosts: localserver
+  become: yes
+  tasks:
+    - name: installation of git
+      yum:
+        name: git
+        state: present
+
