@@ -2,8 +2,13 @@
 - hosts: localserver
   become: yes
   tasks:
-    - name: installation of git
-      yum:
+    - name: installation of apache2
+      apt:
         name: apache2
         state: present
-
+  tasks:
+    - name: start apache2
+      service:
+        name: apache2
+        state: restarted
+      
