@@ -4,6 +4,6 @@
   tasks:
     - name: installation of git
       yum:
-        name: git
+        name: apache2
         state: present
 
